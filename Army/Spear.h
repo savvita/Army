@@ -17,9 +17,9 @@ public:
         return Weapon::hit() * this->length / 100;
     }
 
-    virtual void getDamaged(const Weapon& weapon)
+    virtual void getDamaged(const Weapon* weapon)
     {
-        this->length -= weapon.hit() / 10;
+        this->length -= weapon->hit() / 10;
 
         if (this->length < 0)
             this->length = 0;

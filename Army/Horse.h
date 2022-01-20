@@ -13,6 +13,6 @@ public:
 
 	}
 
-	virtual void getDamaged(const Weapon& weapon);
+	virtual void getDamaged(const Weapon* weapon);
 };
 

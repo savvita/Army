@@ -9,9 +9,9 @@ public:
         this->damage = 120;
     }
 
-    unsigned int defend(const Weapon& weapon) const
+    unsigned int defend(const Weapon* weapon) const
     {
-        return weapon.getDamage() / 2;
+        return weapon->getDamage() / 2;
     }
 
 };

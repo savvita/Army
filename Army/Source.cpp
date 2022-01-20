@@ -1,14 +1,13 @@
 ﻿#include <iostream>
 #include"Bow.h"
+#include"Horse.h"
+#include"Spear.h"
+#include"Sword.h"
 
 int main()
 {
-	while (true)
-	{
-		Bow b;
-		for (size_t i = 0; i < 50; i++)
-		{
-			b.hit();
-		}
-	}
+	Spear s;
+	s.getDamage();
+	s.getDamaged(new Sword());
+	s.hit();
 }
