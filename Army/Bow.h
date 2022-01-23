@@ -14,6 +14,8 @@ public:
 
     }
 
+    bool isArmed() const;
+
     virtual unsigned int hit() const;
 
     ~Bow()

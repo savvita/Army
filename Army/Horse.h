@@ -1,18 +1,20 @@
 #pragma once
 #include"Weapon.h"
+#include"Soldier.h"
 
 class Horse
 {
 private:
-	unsigned int health;
-	unsigned int damage;
+	int health;
 
 public:
-	Horse() :health{ HEALTH }, damage{ HORSE_DAMAGE }
+	Horse() :health{ HEALTH }
 	{
 
 	}
 
-	virtual void getDamaged(const Weapon* weapon);
+	bool isAlive() const;
+
+	virtual void getDamaged(const Soldier* soldier);
 };
 

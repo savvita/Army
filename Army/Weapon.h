@@ -1,7 +1,6 @@
 #pragma once
 #define HEALTH 100
 
-#define WEAPON_DAMAGE 5
 #define ARROW_DAMAGE 10
 #define SPEAR_DAMAGE 10
 #define SWORD_DAMAGE 15
@@ -17,7 +16,7 @@ protected:
 	unsigned int damage;
 
 public:
-	Weapon() :damage{ WEAPON_DAMAGE }
+	Weapon() :damage{ 0 }
 	{
 
 	}

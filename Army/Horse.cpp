@@ -1,8 +1,13 @@
 #include "Horse.h"
 
-void Horse::getDamaged(const Weapon* weapon)
+bool Horse::isAlive() const
 {
-	this->health -= weapon->hit();
+	return (this->health > 0);
+}
+
+void Horse::getDamaged(const Soldier* soldier)
+{
+	this->health -= soldier->attack();
 
 	if (this->health < 0)
 		this->health = 0;

@@ -141,8 +141,12 @@
   <ItemGroup>
     <ClCompile Include="Arrow.cpp" />
     <ClCompile Include="Bow.cpp" />
+    <ClCompile Include="Bowman.cpp" />
+    <ClCompile Include="Horseman.cpp" />
     <ClCompile Include="Quiver.cpp" />
+    <ClCompile Include="Soldier.cpp" />
     <ClCompile Include="Spear.cpp" />
+    <ClCompile Include="Swordman.cpp" />
     <ClCompile Include="Sword.cpp" />
     <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="Horse.cpp" />
@@ -151,8 +155,12 @@
   <ItemGroup>
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="Bow.h" />
+    <ClInclude Include="Bowman.h" />
+    <ClInclude Include="Horseman.h" />
     <ClInclude Include="Quiver.h" />
+    <ClInclude Include="Soldier.h" />
     <ClInclude Include="Spear.h" />
+    <ClInclude Include="Swordman.h" />
     <ClInclude Include="Sword.h" />
     <ClInclude Include="Weapon.h" />
     <ClInclude Include="Horse.h" />

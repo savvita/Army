@@ -4,7 +4,7 @@ class Spear :
     public Weapon
 {
 private:
-    unsigned int length;
+    int length;
 
 public:
     Spear() :length{ SPEAR_LENGTH }
