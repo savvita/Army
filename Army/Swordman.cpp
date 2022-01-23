@@ -1,30 +1,27 @@
 #include "Swordman.h"
 
+std::ostream& Swordman::print(std::ostream& out) const
+{
+	out << "Swordman";
+	return out;
+}
+
 Swordman::Swordman() :Soldier()
 {
 	this->weapon = new Sword();
 }
 
-void Swordman::getAtacked(const Soldier* soldier)
+unsigned int Swordman::getAtacked(const Soldier* soldier)
 {
+	unsigned int damage = 0;
 	if (soldier->isAlive())
 	{
-		this->health -= ((Sword*)weapon)->defend(soldier->getWeapon());
+		damage = ((Sword*)weapon)->defend(soldier->getWeapon());
+		this->health -= damage;
 
 		if (this->health < 0)
 			this->health = 0;
-
-		if (this->weapon != nullptr)
-			this->weapon->getDamaged(soldier->getWeapon()->getDamage());
 	}
 
-	if (!this->isAlive())
-		std::cout << "Swordman died\n";
-}
-
-unsigned int Swordman::attack() const
-{
-	unsigned int dam = Soldier::attack();
-	std::cout << "Swordman attacks (damage " << dam << ")!\n";
-	return dam;
+	return damage;
 }

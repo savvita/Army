@@ -59,10 +59,30 @@ void Squad::attack(Squad& enemies) const
 			break;
 
 		int randomEnemy = rand() % enemies.getCount();
-		enemies[randomEnemy]->getAtacked(this->soldiers[i]);
+
+		std::cout << *this->soldiers[i] << " attacks " << *enemies[randomEnemy] << " (damage ";
+
+		unsigned int damage = enemies[randomEnemy]->getAtacked(this->soldiers[i]);
+
+		std::cout << damage << "). "<< *enemies[randomEnemy] << " has "<< enemies[randomEnemy]->getHealth()<<" health. ";
 
 		if (!enemies[randomEnemy]->isAlive())
+		{
+			std::cout << *enemies[randomEnemy] << " died\n";
 			enemies.deleteSoldier(randomEnemy);
+		}
+		else
+		{
+			std::cout << "\n";
+		}
+	}
+}
+
+void Squad::print() const
+{
+	for (unsigned i = 0; i < this->count; i++)
+	{
+		std::cout << *this->soldiers[i] << "\n";
 	}
 }
 

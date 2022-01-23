@@ -1,5 +1,10 @@
 #include "Soldier.h"
 
+std::ostream& Soldier::print(std::ostream& out) const
+{
+	return out;
+}
+
 Soldier::Soldier() :health{ HEALTH }, weapon{ nullptr }
 {
 
@@ -20,18 +25,22 @@ unsigned int Soldier::attack() const
     return 0;
 }
 
-void Soldier::getAtacked(const Soldier* soldier)
+unsigned int Soldier::getAtacked(const Soldier* soldier)
 {
+	unsigned int damage = 0;
 	if (soldier->isAlive())
 	{
-		this->health -= soldier->attack();
+		damage = soldier->attack();
+		this->health -= damage;
 
 		if (this->health < 0)
 			this->health = 0;
 
 		if (this->weapon != nullptr)
-			this->weapon->getDamaged(soldier->getWeapon()->getDamage());
+			this->weapon->getDamaged(damage);
 	}
+
+	return damage;
 }
 
 bool Soldier::isAlive() const
@@ -48,4 +57,9 @@ Soldier::~Soldier()
 {
 	if (this->weapon != nullptr)
 		delete this->weapon;
+}
+
+std::ostream& operator<<(std::ostream& out, const Soldier& soldier)
+{
+	return soldier.print(out);
 }

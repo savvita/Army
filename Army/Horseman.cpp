@@ -1,5 +1,11 @@
 #include "Horseman.h"
 
+std::ostream& Horseman::print(std::ostream& out) const
+{
+	out << "Horseman";
+	return out;
+}
+
 Horseman::Horseman() :Soldier()
 {
 	this->weapon = new Spear();
@@ -9,20 +15,16 @@ Horseman::Horseman() :Soldier()
 unsigned int Horseman::attack() const
 {
 	unsigned int dam = (this->horse->isAlive()) ? Soldier::attack() + HORSE_DAMAGE : Soldier::attack();
-	std::cout << "Horseman attacks (damage " << dam << ")!\n";
 	return dam;
 }
 
-void Horseman::getAtacked(const Soldier* soldier)
+unsigned int Horseman::getAtacked(const Soldier* soldier)
 {
-	Soldier::getAtacked(soldier);
-	if (!this->isAlive())
-		std::cout << "Horseman died\n";
+	unsigned int damage = Soldier::getAtacked(soldier);
 
 	this->horse->getDamaged(soldier);
 
-	if (!this->horse->isAlive())
-		std::cout << "Horseman lose his horse\n";
+	return damage;
 }
 
 Horseman::~Horseman()

@@ -5,11 +5,9 @@
 class Bowman :
     public Soldier
 {
+private:
+	virtual std::ostream& print(std::ostream& out) const;
 public:
 	Bowman();
-
-	virtual unsigned int attack() const;
-
-	virtual void getAtacked(const Soldier* soldier);
 };
 

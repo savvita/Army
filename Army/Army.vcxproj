@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Bow.cpp" />
     <ClCompile Include="Bowman.cpp" />
+    <ClCompile Include="Figth.cpp" />
     <ClCompile Include="Horseman.cpp" />
     <ClCompile Include="Quiver.cpp" />
     <ClCompile Include="Soldier.cpp" />
@@ -154,9 +155,11 @@
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="Bow.h" />
     <ClInclude Include="Bowman.h" />
+    <ClInclude Include="Figth.h" />
     <ClInclude Include="Horseman.h" />
     <ClInclude Include="Quiver.h" />
     <ClInclude Include="Soldier.h" />
+    <ClInclude Include="Soldiers.h" />
     <ClInclude Include="Spear.h" />
     <ClInclude Include="Squad.h" />
     <ClInclude Include="Swordman.h" />

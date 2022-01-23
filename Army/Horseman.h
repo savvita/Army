@@ -8,12 +8,14 @@ class Horseman :
 {
 protected:
 	Horse* horse;
+
+	virtual std::ostream& print(std::ostream& out) const;
 public:
 	Horseman();
 
 	virtual unsigned int attack() const;
 
-	virtual void getAtacked(const Soldier* soldier);
+	virtual unsigned int getAtacked(const Soldier* soldier);
 
 	virtual ~Horseman();
 };

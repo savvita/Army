@@ -7,12 +7,12 @@ Spear::Spear() :length{ SPEAR_LENGTH }
 
 unsigned int Spear::hit()
 {
-    return Weapon::hit() * this->length / 100;
+    return Weapon::hit() * this->length / 100.0;
 }
 
 void Spear::getDamaged(unsigned int damage)
 {
-    this->length -= damage / 2;
+    this->length -= (damage / 2);
 
     if (this->length < 0)
         this->length = 0;
