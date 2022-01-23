@@ -8,7 +8,7 @@ private:
 	unsigned int damage;
 
 public:
-	Horse() :health{ 100 }, damage{ 10 }
+	Horse() :health{ HEALTH }, damage{ HORSE_DAMAGE }
 	{
 
 	}

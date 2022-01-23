@@ -8,7 +8,7 @@ void Quiver::addArrow(Arrow* arrow)
 
 Quiver::Quiver()
 {
-	for (size_t i = 0; i < 20; i++)
+	for (size_t i = 0; i < ARROW_COUNT; i++)
 	{
 		this->addArrow(new Arrow());
 	}
@@ -26,6 +26,11 @@ Arrow* Quiver::getArrow()
 	delete tmp;
 
 	return arrow;
+}
+
+bool Quiver::isEmpty() const
+{
+	return (this->tail == NULL);
 }
 
 Quiver::~Quiver()

@@ -24,6 +24,8 @@ public:
 
 	Arrow* getArrow();
 
+	bool isEmpty() const;
+
 	~Quiver();
 };
 

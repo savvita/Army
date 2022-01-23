@@ -6,7 +6,7 @@ class Sword :
 public:
     Sword()
     {
-        this->damage = 120;
+        this->damage = SWORD_DAMAGE;
     }
 
     unsigned int defend(const Weapon* weapon) const

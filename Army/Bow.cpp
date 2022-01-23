@@ -4,10 +4,9 @@ unsigned int Bow::hit() const
 {
     unsigned int damage = 0;
 
-    Arrow* arrow = this->quiver->getArrow();
-
-    if (arrow!= NULL)
+    if(!this->quiver->isEmpty())
     {
+        Arrow* arrow = this->quiver->getArrow();
         damage = arrow->hit();
         delete arrow;
     }

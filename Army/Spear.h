@@ -7,9 +7,9 @@ private:
     unsigned int length;
 
 public:
-    Spear() :length{ 200 }
+    Spear() :length{ SPEAR_LENGTH }
     {
-        this->damage = 75;
+        this->damage = SPEAR_DAMAGE;
     }
 
     virtual unsigned int hit() const
@@ -19,7 +19,7 @@ public:
 
     virtual void getDamaged(const Weapon* weapon)
     {
-        this->length -= weapon->hit() / 10;
+        this->length -= weapon->hit() / 2;
 
         if (this->length < 0)
             this->length = 0;

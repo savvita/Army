@@ -6,7 +6,7 @@ class Arrow :public Weapon
 public:
 	Arrow()
 	{
-		this->damage = 40 + (rand() % 20);
+		this->damage = ARROW_DAMAGE + (rand() % (ARROW_DAMAGE / 2));
 	}
 };
 
