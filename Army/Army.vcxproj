@@ -139,16 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Arrow.cpp" />
     <ClCompile Include="Bow.cpp" />
     <ClCompile Include="Bowman.cpp" />
     <ClCompile Include="Horseman.cpp" />
     <ClCompile Include="Quiver.cpp" />
     <ClCompile Include="Soldier.cpp" />
     <ClCompile Include="Spear.cpp" />
+    <ClCompile Include="Squad.cpp" />
     <ClCompile Include="Swordman.cpp" />
-    <ClCompile Include="Sword.cpp" />
-    <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="Horse.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
@@ -160,6 +158,7 @@
     <ClInclude Include="Quiver.h" />
     <ClInclude Include="Soldier.h" />
     <ClInclude Include="Spear.h" />
+    <ClInclude Include="Squad.h" />
     <ClInclude Include="Swordman.h" />
     <ClInclude Include="Sword.h" />
     <ClInclude Include="Weapon.h" />

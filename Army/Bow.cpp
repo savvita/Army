@@ -1,6 +1,10 @@
 #include "Bow.h"
 
-unsigned int Bow::hit() const
+Bow::Bow() :quiver{ new Quiver() }
+{
+}
+
+unsigned int Bow::hit()
 {
     unsigned int damage = 0;
 
@@ -10,6 +14,12 @@ unsigned int Bow::hit() const
         damage = arrow->hit();
         delete arrow;
     }
+    this->damage = damage;
 
     return damage;
+}
+
+Bow::~Bow()
+{
+    delete this->quiver;
 }

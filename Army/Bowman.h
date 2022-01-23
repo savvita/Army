@@ -6,9 +6,10 @@ class Bowman :
     public Soldier
 {
 public:
-	Bowman():Soldier()
-	{
-		this->weapon = new Bow();
-	}
+	Bowman();
+
+	virtual unsigned int attack() const;
+
+	virtual void getAtacked(const Soldier* soldier);
 };
 

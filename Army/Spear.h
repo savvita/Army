@@ -7,22 +7,10 @@ private:
     int length;
 
 public:
-    Spear() :length{ SPEAR_LENGTH }
-    {
-        this->damage = SPEAR_DAMAGE;
-    }
+    Spear();
 
-    virtual unsigned int hit() const
-    {
-        return Weapon::hit() * this->length / 100;
-    }
+    virtual unsigned int hit();
 
-    virtual void getDamaged(const Weapon* weapon)
-    {
-        this->length -= weapon->hit() / 2;
-
-        if (this->length < 0)
-            this->length = 0;
-    }
+    virtual void getDamaged(unsigned int damage);
 };
 

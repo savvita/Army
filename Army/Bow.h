@@ -9,18 +9,10 @@ private:
     Quiver* quiver;
 
 public:
-    Bow() :quiver{ new Quiver() }
-    {
+    Bow();
 
-    }
+    virtual unsigned int hit();
 
-    bool isArmed() const;
-
-    virtual unsigned int hit() const;
-
-    ~Bow()
-    {
-        delete this->quiver;
-    }
+    ~Bow();
 };
 

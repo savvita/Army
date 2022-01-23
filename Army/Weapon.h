@@ -26,12 +26,12 @@ public:
 		return this->damage;
 	}
 
-	virtual unsigned int hit() const
+	virtual unsigned int hit()
 	{
 		return this->damage;
 	}
 
-	virtual void getDamaged(const Weapon* weapon)
+	virtual void getDamaged(unsigned int damage)
 	{
 
 	}

@@ -9,11 +9,7 @@ class Horseman :
 protected:
 	Horse* horse;
 public:
-	Horseman():Soldier()
-	{
-		this->weapon = new Spear();
-		this->horse = new Horse();
-	}
+	Horseman();
 
 	virtual unsigned int attack() const;
 

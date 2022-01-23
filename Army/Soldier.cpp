@@ -1,5 +1,10 @@
 #include "Soldier.h"
 
+Soldier::Soldier() :health{ HEALTH }, weapon{ nullptr }
+{
+
+}
+
 const Weapon* Soldier::getWeapon() const
 {
 	return this->weapon;
@@ -25,7 +30,7 @@ void Soldier::getAtacked(const Soldier* soldier)
 			this->health = 0;
 
 		if (this->weapon != nullptr)
-			this->weapon->getDamaged(soldier->getWeapon());
+			this->weapon->getDamaged(soldier->getWeapon()->getDamage());
 	}
 }
 
@@ -37,4 +42,10 @@ bool Soldier::isAlive() const
 int Soldier::getHealth() const
 {
 	return this->health;
+}
+
+Soldier::~Soldier()
+{
+	if (this->weapon != nullptr)
+		delete this->weapon;
 }

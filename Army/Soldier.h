@@ -1,5 +1,6 @@
 #pragma once
 #include"Weapon.h"
+#include<iostream>
 
 class Soldier
 {
@@ -8,10 +9,7 @@ protected:
 	Weapon* weapon;
 
 public:
-	Soldier() :health{ HEALTH }, weapon{ nullptr }
-	{
-
-	}
+	Soldier();
 
 	virtual const Weapon* getWeapon() const;
 
@@ -23,10 +21,6 @@ public:
 
 	int getHealth() const;
 
-	virtual ~Soldier()
-	{
-		if (this->weapon != nullptr)
-			delete this->weapon;
-	}
+	virtual ~Soldier();
 };
 

@@ -8,10 +8,7 @@ private:
 	int health;
 
 public:
-	Horse() :health{ HEALTH }
-	{
-
-	}
+	Horse();
 
 	bool isAlive() const;
 
